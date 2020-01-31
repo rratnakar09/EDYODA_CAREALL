@@ -1,0 +1,86 @@
+-- MySQL dump 10.13  Distrib 5.7.29, for Linux (x86_64)
+--
+-- Host: localhost    Database: careall
+-- ------------------------------------------------------
+-- Server version	5.7.29-0ubuntu0.18.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `ELDERS`
+--
+
+DROP TABLE IF EXISTS `ELDERS`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ELDERS` (
+  `Reg_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Name` varchar(30) NOT NULL,
+  `Age` int(10) unsigned DEFAULT NULL,
+  `Availability` tinyint(1) NOT NULL,
+  `Address` varchar(300) DEFAULT NULL,
+  `reviews` decimal(4,2) DEFAULT NULL,
+  `Funds` int(10) unsigned NOT NULL,
+  `Cared_BY` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`Reg_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ELDERS`
+--
+
+LOCK TABLES `ELDERS` WRITE;
+/*!40000 ALTER TABLE `ELDERS` DISABLE KEYS */;
+INSERT INTO `ELDERS` VALUES (3,'Nitish',66,1,'Patna',0.00,12000,NULL),(4,'Babloo',62,1,'Patna',0.00,15000,NULL),(5,'Sitesh',67,1,'Bhagalpur',0.00,20000,NULL),(6,'Kumar',69,0,'Cuttack',3.45,27000,'Neha'),(7,'Prabhu',76,1,'Hyderabad',0.00,21000,NULL),(8,'Mithali',73,1,'Pune',0.00,14000,NULL),(9,'Heren',70,1,'Bangalore',0.00,8000,NULL),(10,'Raman',60,1,'Hubli',0.00,15000,NULL),(11,'Ramesh',26,1,'Pune',2.00,13000,NULL),(12,'Shrini',65,1,'Patna',0.00,12000,NULL),(13,'Shrini',65,1,'Patna',1.05,12000,NULL);
+/*!40000 ALTER TABLE `ELDERS` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `YOUNGERS`
+--
+
+DROP TABLE IF EXISTS `YOUNGERS`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `YOUNGERS` (
+  `Reg_ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Name` varchar(30) NOT NULL,
+  `Age` int(10) unsigned DEFAULT NULL,
+  `Availability` tinyint(1) NOT NULL,
+  `Elders_Count` tinyint(4) DEFAULT NULL,
+  `Address` varchar(300) DEFAULT NULL,
+  `reviews` decimal(4,2) DEFAULT NULL,
+  PRIMARY KEY (`Reg_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `YOUNGERS`
+--
+
+LOCK TABLES `YOUNGERS` WRITE;
+/*!40000 ALTER TABLE `YOUNGERS` DISABLE KEYS */;
+INSERT INTO `YOUNGERS` VALUES (1,'shna',17,1,0,'Bangalore',0.00),(2,'Nitish',18,1,0,'Patna',0.00),(3,'Shiva',19,1,0,'Patna',0.00),(4,'Sairam',18,1,0,'Hyderabad',0.00),(5,'Rukul',20,1,0,'Bangalore',0.00),(6,'Neha',23,1,0,'Pune',2.00),(7,'Shivesh',19,1,0,'Bangalore',0.00),(8,'Rana',18,1,0,'Bhagalpur',0.00),(9,'Nihal',18,1,0,'Patna',0.00),(10,'Rahul',18,1,0,'Hubli',0.00),(11,'Rajesh',22,1,0,'Ranchi',0.00);
+/*!40000 ALTER TABLE `YOUNGERS` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-01-31 23:15:00

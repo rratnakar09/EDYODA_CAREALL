@@ -1,0 +1,54 @@
+  
+# I have created a database named careall having two table ELDERS and YOUNGERS to store the details of elders and Youngers.
+
+For elder table which will have the below records 
+data = [Reg_ID, name, age, is_available, address, reviews, fund, Cared_BY]
+
+CREATE TABLE ELDERS (
+Reg_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+Name VARCHAR(30) NOT NULL, 
+Age INT UNSIGNED,
+Availability BOOL NOT NULL, 
+Address VARCHAR(300), 
+Reviews DECIMAL(4,2) ,
+Funds INT UNSIGNED NOT NULL,
+Cared_BY VARCHAR(30));
+
+
+# data = [name, age, is_available,Elders_Count, address, reviews]
+CREATE TABLE YOUNGERS (
+Reg_ID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+Name VARCHAR(30) NOT NULL, 
+Age INT UNSIGNED,
+Availability BOOL NOT NULL, 
+Elders_Count TINYINT, 
+Address VARCHAR(300), 
+Reviews DECIMAL(2,2));
+
+
+INSERT INTO ELDERS (Name,Age,Availability,Address,Reviews, funds) VALUES ( 'Nitish', 66, True, 'Patna', 0, 12000);
+INSERT INTO ELDERS (Name,Age,Availability,Address,Reviews, funds) VALUES ( 'Babloo', 62, True, 'Patna', 0, 15000);
+INSERT INTO ELDERS (Name,Age,Availability,Address,Reviews, funds) VALUES ( 'Sitesh', 67, True, 'Bhagalpur', 0, 20000);
+INSERT INTO ELDERS (Name,Age,Availability,Address,Reviews, funds) VALUES ( 'Kumar', 69, True, 'Cuttack', 0, 27000);
+INSERT INTO ELDERS (Name,Age,Availability,Address,Reviews, funds) VALUES ( 'Prabhu', 76, True, 'Hyderabad', 0, 21000);
+INSERT INTO ELDERS (Name,Age,Availability,Address,Reviews, funds) VALUES ( 'Mithali', 73, True, 'Pune', 0, 14000);
+INSERT INTO ELDERS (Name,Age,Availability,Address,Reviews, funds) VALUES ( 'Heren', 70, True, 'Bangalore', 0, 8000);
+INSERT INTO ELDERS (Name,Age,Availability,Address,Reviews, funds) VALUES ( 'Raman', 60, True, 'Hubli', 0, 15000);
+INSERT INTO ELDERS (Name,Age,Availability,Address,Reviews, funds) VALUES ( 'Ramesh', 26, True, 'Pune', 0, 13000);
+
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Nitish', 18, True, 0, 'Patna', 0);
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Shiva', 19, True, 0, 'Patna', 0);
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Sairam', 18, True, 0, 'Hyderabad', 0);
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Rukul', 20, True, 0, 'Bangalore', 0);
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Neha', 23, True, 0, 'Pune', 0);
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Shivesh', 19, True, 0, 'Bangalore', 0);
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Rana', 18, True, 0, 'Bhagalpur', 0);
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Nihal', 18, True, 0, 'Patna', 0);
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Rahul', 18, True, 0, 'Hubli', 0);
+INSERT INTO YOUNGERS (Name,Age,Availability,Elders_Count, Address, Reviews ) VALUES ( 'Rajesh', 22, True, 0, 'Ranchi', 0);
+
+
+
+
+
+
